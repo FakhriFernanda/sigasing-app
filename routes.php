@@ -17,6 +17,9 @@ if (isset($_GET['page'])){
         case 'lokasiupdate':
             file_exists('pages/admin/lokasiupdate.php') ? include 'pages/admin/lokasiupdate.php' : include "pages/404.php";
         break;
+        case 'lokasidelete':
+            file_exists('pages/admin/lokasidelete.php') ? include 'pages/admin/lokasidelete.php' : include "pages/404.php";
+        break;
     }
 } else {
     include "pages/home.php";
