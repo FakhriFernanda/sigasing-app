@@ -36,7 +36,7 @@ if (isset($_POST['button_create'])){
     <div class="containerfluid">
         <div class="row mb2">
             <div class="col-sm-6">
-                <h1>Tamah Data Lokasi</h1>
+                <h1>Tambah Data Lokasi</h1>
             </div>
             <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
