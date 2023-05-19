@@ -59,7 +59,7 @@ if (isset($_POST['button_create'])){
                     <label for="nama_lokasi">Nama Lokasi</label>
                     <input type="text" class="form-control" name="nama_lokasi">
                 </div>
-                <a href="?page=lokaasiread" class="btn btn-danger btn-sm float-right">
+                <a href="?page=lokasiread" class="btn btn-danger btn-sm float-right">
                     <i class="fa fa-times"></i> Batal
                 </a>
                 <button type="submit" name="button_create" class="btn btn-success btn-sm float-right">

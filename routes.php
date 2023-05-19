@@ -8,6 +8,7 @@ if (isset($_GET['page'])){
             break;
         default;
             include "pages/404.php";
+
         case 'lokasiread':
             file_exists('pages/admin/lokasiread.php') ? include 'pages/admin/lokasiread.php' : include "pages/404.php";
         break;
@@ -19,6 +20,20 @@ if (isset($_GET['page'])){
         break;
         case 'lokasidelete':
             file_exists('pages/admin/lokasidelete.php') ? include 'pages/admin/lokasidelete.php' : include "pages/404.php";
+        break;
+
+        // <---------------- Jabatan ---------------->
+        case 'jabatanread':
+            file_exists('pages/admin/jabatanread.php') ? include 'pages/admin/jabatanread.php' : include "pages/404.php";
+        break;
+        case 'jabatancreate':
+            file_exists('pages/admin/jabatancreate.php') ? include 'pages/admin/jabatancreate.php' : include "pages/404.php";
+        break;
+        case 'jabatanupdate':
+            file_exists('pages/admin/jabatanupdate.php') ? include 'pages/admin/jabatanupdate.php' : include "pages/404.php";
+        break;
+        case 'jabatandelete':
+            file_exists('pages/admin/jabatandelete.php') ? include 'pages/admin/jabatandelete.php' : include "pages/404.php";
         break;
     }
 } else {
