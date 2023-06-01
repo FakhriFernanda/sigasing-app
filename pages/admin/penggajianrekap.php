@@ -27,14 +27,14 @@
         ?>
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Lokasi</h1>
+                <h1 class="m-0">Penggajian Rekap</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item">
                         <a href="?page=home"> Home</a>
                     </li>
-                    <li class="breadcrumb-item">Lokasi</li>
+                    <li class="breadcrumb-item">Penggajian Rekap</li>
                 </ol>
             </div><!-- /.col -->
         </div><!-- /.row -->
@@ -43,10 +43,10 @@
 <div class="content">
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Data Lokasi</h3>
-            <a href="?page=lokasicreate"
+            <h3 class="card-title">Data Rekap Gaji</h3>
+            <a href="?page=peenggajianrekap"
                 class="btn btn-success btn-sm float-right">
-                <i class="fa fa-plus-circle"></i> Tambah Data</a>
+                <i class="fa fa-"></i> Export PDF</a>
         </div>
         <div class="card-body">
         <table id="mytable" class="table table-bordered table-hover">
@@ -73,6 +73,7 @@
             </tr>
         </tfoot>
         <tbody>
+        </tbody>
         <?php
         $database = new Database();
         $db = $database->getConnection();
@@ -115,6 +116,11 @@
 <?php include_once "partials/scriptsdatatables.php" ?>
 <script>
     $(function() {
-        $('#mytable').DataTable()
+        $("#mytable").DataTable({
+            "responsive": true,
+            "lengthChange": false,
+            "autoWidth": false,
+            "buttons": ["copy","csv","excel","pdf","print","colvis"]
+        }).buttons().container().appendTo('#mytable_wrapper .col-md-6:eq(0)');
     });
 </script>
