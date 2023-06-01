@@ -62,26 +62,26 @@ if (isset($_GET['id'])){
         </div>
     </section>
     <section class="content">
-    <div class="card">
-        <div class="card-header">
-            <h3 class="card-title">Ubah Lokasi</h3>
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Ubah Lokasi</h3>
+            </div>
+            <div class="card-body">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="nama_lokasi">Nama Lokasi</label>
+                        <input type="hidden" class="form-control" name="id" value="<?php echo $row['id'] ?>">
+                        <input type="text" class="form-control" name="nama_lokasi" value="<?php echo $row['nama_lokasi'] ?>">
+                    </div>
+                    <a href="?page=lokasiread" class="btn btn-danger btn-sm float-right">
+                        <i class="fa fa-times"></i> Batal
+                    </a>
+                    <button type="submit" name="button_update" class="btn btn-success btn-sm float-right">
+                        <i class="fa fa-save"></i> Simpan
+                    </button>
+                </form>
+            </div>
         </div>
-        <div class="card-body">
-            <form method="POST">
-                <div class="form-group">
-                    <label for="nama_lokasi">Nama Lokasi</label>
-                    <input type="hidden" class="form-control" name="id" value="<?php echo $row['id'] ?>">
-                    <input type="text" class="form-control" name="nama_lokasi" value="<?php echo $row['nama_lokasi'] ?>">
-                </div>
-                <a href="?page=lokasiread" class="btn btn-danger btn-sm float-right">
-                    <i class="fa fa-times"></i> Batal
-                </a>
-                <button type="submit" name="button_update" class="btn btn-success btn-sm float-right">
-                    <i class="fa fa-save"></i> Simpan
-                </button>
-            </form>
-        </div>
-    </div>
 </section>
 <?php
     } else {

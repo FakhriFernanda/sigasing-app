@@ -62,7 +62,12 @@ if (isset($_GET['page'])){
         break;
         case 'karyawandelete':
             file_exists('pages/admin/karyawandelete.php') ? include 'pages/admin/karyawandelete.php' : include "pages/404.php";
-        break;    
+        break;
+          
+        
+        case 'karyawanbagian':
+            file_exists('pages/admin/karyawanbagian.php') ? include 'pages/admin/karyawanbagian.php' : include "pages/404.php";
+        break;
     }
 } else {
     include "pages/home.php";
